@@ -1,4 +1,4 @@
-node('baozengkai'){
+node('docker'){
     stage('Build'){
         echo 'Building...'
     }
