@@ -3,15 +3,8 @@ node('docker'){
         echo 'Prepare...'
     }
     
-    stage('While Loop'){
-        while(1){
-           def count = 0
-           echo '${count}'
-           count = count + 1
-           if(count == 10){
-               break
-           }
-        }
+    stage('sleep'){
+        sleep(10000)
     }
     
     stage('Clean'){
