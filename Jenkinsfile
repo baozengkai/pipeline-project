@@ -9,7 +9,7 @@ node('docker'){
     }
     
     stage('Build Rainbow docker'){
-        sh 'docker volume create maven-repo'
+        sh 'docker volume create --name maven-repo'
         sh 'docker pull 192.168.84.23:5000/library/anyrobot-graph-baseimage:dev'
         withDockerContainer(args: "--name build-rainbow -v maven-repo:/root/.m2", image: "192.168.84.23:5000/library/anyrobot-graph-baseimage:dev") {
             echo "WORKSPACE is $WORKSPACE"
