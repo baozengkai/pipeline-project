@@ -4,7 +4,7 @@ node('docker'){
     }
     
     stage('sleep'){
-        sleep(10000)
+        sleep(15)
     }
     
     stage('Clean'){
